@@ -1,5 +1,5 @@
 <?php
-session_start(); // Reanudamos la sesión
+session_start(); // Iniciamos o reanudamos la sesión
 
 // 1️⃣ Si viene del index.php, guardamos la figura seleccionada
 if (isset($_POST['figura'])) {
