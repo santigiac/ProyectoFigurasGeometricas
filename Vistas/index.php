@@ -1,34 +1,38 @@
-<?php
-session_start(); // Iniciamos o reanudamos la sesión
-
-
-$figuraSeleccionada = isset($_SESSION['figura']) ? $_SESSION['figura'] : '';
-?>
-
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Seleccionar Figura Geométrica</title>
-    <link rel="stylesheet" href="../css/estilo.css">
+    <title>Selecciona una figura</title>
+    <link rel="stylesheet" href="../css/Style.css">
 </head>
-<body>
+<body class="inicio">
 
-<h1>Calculadora de Figuras Geométricas</h1>
+<h1>Selecciona una figura geométrica</h1>
 
-<form action="formulario.php" method="post">
-    <label for="figura">Elige una figura:</label>
-    <select name="figura" id="figura" required>
-        <option value="">-- Selecciona una figura --</option>
-        <option value="Triangulo" <?php if($figuraSeleccionada == 'Triangulo') echo 'selected'; ?>>Triángulo</option>
-        <option value="Rectangulo" <?php if($figuraSeleccionada == 'Rectangulo') echo 'selected'; ?>>Rectángulo</option>
-        <option value="Cuadrado" <?php if($figuraSeleccionada == 'Cuadrado') echo 'selected'; ?>>Cuadrado</option>
-        <option value="Circulo" <?php if($figuraSeleccionada == 'Circulo') echo 'selected'; ?>>Círculo</option>
-    </select>
+<div class="figuras-contenedor">
+    <form action="formulario.php" method="post">
+        <button class="figura cuadrado" name="figura" value="Cuadrado">
+            <img src="../img/cuadrado.png" alt="Cuadrado">
+            <span>Cuadrado</span>
+        </button>
 
-    <br><br>
-    <input type="submit" value="Continuar">
-</form>
+        <button class="figura rectangulo" name="figura" value="Rectangulo">
+            <img src="../img/rectangulo.png" alt="Rectángulo">
+            <span>Rectángulo</span>
+        </button>
+
+        <button class="figura triangulo" name="figura" value="Triangulo">
+            <img src="../img/triangulo.png" alt="Triángulo">
+            <span>Triángulo</span>
+        </button>
+
+        <button class="figura circulo" name="figura" value="Circulo">
+            <img src="../img/circulo.png" alt="Círculo">
+            <span>Círculo</span>
+        </button>
+    </form>
+</div>
 
 </body>
 </html>

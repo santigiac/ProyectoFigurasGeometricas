@@ -21,10 +21,11 @@ $altura = isset($_SESSION['altura']) ? $_SESSION['altura'] : '';
 <head>
     <meta charset="UTF-8">
     <title>Introduce los datos de la figura</title>
-    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/Style.css">
     <script src="../js/validacion.js" defer></script>
 </head>
-<body>
+<!-- clase dinamica para ajustar el fonso a cada figura -->
+<body class="<?php echo strtolower($figura); ?>">  
 
 <?php include '../header.php'; ?>
 

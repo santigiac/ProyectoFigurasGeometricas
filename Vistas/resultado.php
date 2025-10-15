@@ -53,7 +53,7 @@ $perimetro = $objeto->calcularPerimetro();
 <head>
     <meta charset="UTF-8">
     <title>Resultado - <?php echo $figura; ?></title>
-    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/Style.css">
 </head>
 <body>
 

@@ -1,0 +1,130 @@
+/* === ESTILO GENERAL === */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* === INICIO === */
+.inicio {
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+}
+
+h1 {
+    margin-top: 40px;
+    font-size: 2em;
+    color: #333;
+}
+
+.figuras-contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 40px;
+}
+
+button.figura {
+    width: 150px;
+    height: 150px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Animaciones */
+button.figura:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
+}
+
+/* === Colores por figura === */
+.cuadrado {
+    background: #0077b6;
+}
+.rectangulo {
+    background: #2a9d8f;
+}
+.triangulo {
+    background: #e76f51;
+}
+.circulo {
+    background: #8338ec;
+}
+
+/* === FORMULARIO GENERAL === */
+form {
+    background: white;
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+form input[type="number"] {
+    width: 90%;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+form input[type="submit"] {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+form input[type="submit"]:hover {
+    background: #000;
+}
+
+/* === RESULTADOS === */
+.resultado {
+    background: white;
+    padding: 25px;
+    max-width: 400px;
+    margin: 40px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.resultado p {
+    margin: 8px 0;
+}
+
+/* === HEADER === */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 4px solid #ff9800;
+}
+/* === FORMULARIO TEMÁTICO SEGÚN FIGURA === */
+body.triangulo {
+    background: linear-gradient(135deg, #f7b267, #f79d65);
+}
+
+body.cuadrado {
+    background: linear-gradient(135deg, #74b9ff, #0984e3);
+}
+
+body.rectangulo {
+    background: linear-gradient(135deg, #9ef01a, #38b000);
+}
+
+body.circulo {
+    background: linear-gradient(135deg, #d0a2f7, #8338ec);
+}
