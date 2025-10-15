@@ -4,15 +4,17 @@ session_start();
 // 1️⃣ Recuperamos la figura desde la sesión
 $figura = isset($_SESSION['figura']) ? $_SESSION['figura'] : '';
 
-// 2️⃣ Guardamos los lados enviados por el formulario en sesión
+// 2️⃣ Guardamos los valores enviados por el formulario en sesión
 if (isset($_POST['lado1'])) $_SESSION['lado1'] = $_POST['lado1'];
 if (isset($_POST['lado2'])) $_SESSION['lado2'] = $_POST['lado2'];
-if (isset($_POST['lado3'])) $_SESSION['lado3'] = $_POST['lado3'];
+if (isset($_POST['base'])) $_SESSION['base'] = $_POST['base'];
+if (isset($_POST['altura'])) $_SESSION['altura'] = $_POST['altura'];
 
 // 3️⃣ Recuperamos los valores guardados
-$lado1 = isset($_SESSION['lado1']) ? $_SESSION['lado1'] : 0;
-$lado2 = isset($_SESSION['lado2']) ? $_SESSION['lado2'] : 0;
-$lado3 = isset($_SESSION['lado3']) ? $_SESSION['lado3'] : 0;
+$lado1 = $_SESSION['lado1'] ?? 0;
+$lado2 = $_SESSION['lado2'] ?? 0;
+$base = $_SESSION['base'] ?? 0;
+$altura = $_SESSION['altura'] ?? 0;
 
 // 4️⃣ Incluimos las clases
 require_once '../clases/FiguraGeometrica.php';
@@ -25,7 +27,7 @@ require_once '../clases/Circulo.php';
 $objeto = null;
 switch ($figura) {
     case 'Triangulo':
-        $objeto = new Triangulo('Triángulo', $lado1, $lado2, $lado3);
+        $objeto = new Triangulo('Triángulo', $base, $altura);
         break;
     case 'Rectangulo':
         $objeto = new Rectangulo('Rectángulo', $lado1, $lado2);
@@ -60,9 +62,20 @@ $perimetro = $objeto->calcularPerimetro();
 <h2>Resultados de la figura: <?php echo $figura; ?></h2>
 
 <div class="resultado">
-    <?php
-        echo $objeto; // muestra el texto del método __toString()
-    ?>
+    <p><strong>Figura:</strong> <?php echo $figura; ?></p>
+
+    <?php if ($figura == 'Triangulo'): ?>
+        <p><strong>Base:</strong> <?php echo $base; ?></p>
+        <p><strong>Altura:</strong> <?php echo $altura; ?></p>
+    <?php elseif ($figura == 'Rectangulo'): ?>
+        <p><strong>Lado 1:</strong> <?php echo $lado1; ?></p>
+        <p><strong>Lado 2:</strong> <?php echo $lado2; ?></p>
+    <?php else: ?>
+        <p><strong>Lado:</strong> <?php echo $lado1; ?></p>
+    <?php endif; ?>
+
+    <p><strong>Área:</strong> <?php echo $area; ?></p>
+    <p><strong>Perímetro:</strong> <?php echo $perimetro; ?></p>
 </div>
 
 <br>

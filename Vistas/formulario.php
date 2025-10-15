@@ -12,7 +12,8 @@ $figura = isset($_SESSION['figura']) ? $_SESSION['figura'] : '';
 // 3️⃣ Recuperamos los lados anteriores (si existen)
 $lado1 = isset($_SESSION['lado1']) ? $_SESSION['lado1'] : '';
 $lado2 = isset($_SESSION['lado2']) ? $_SESSION['lado2'] : '';
-$lado3 = isset($_SESSION['lado3']) ? $_SESSION['lado3'] : '';
+$base = isset($_SESSION['base']) ? $_SESSION['base'] : '';
+$altura = isset($_SESSION['altura']) ? $_SESSION['altura'] : '';
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +28,7 @@ $lado3 = isset($_SESSION['lado3']) ? $_SESSION['lado3'] : '';
 
 <?php include '../header.php'; ?>
 
-<h2>Figura seleccionada: <?php echo $figura; ?></h2>
+<h2>Figura seleccionada: <?php echo ucfirst($figura); ?></h2>
 
 <form action="resultado.php" method="post" id="form-figura">
 
@@ -36,14 +37,11 @@ $lado3 = isset($_SESSION['lado3']) ? $_SESSION['lado3'] : '';
     switch ($figura) {
         case 'Triangulo':
             echo '
-                <label>Lado 1:</label>
-                <input type="number" step="any" name="lado1" value="'.$lado1.'" required><br>
+                <label>Base:</label>
+                <input type="number" step="any" name="base" value="'.$base.'" required><br>
 
-                <label>Lado 2:</label>
-                <input type="number" step="any" name="lado2" value="'.$lado2.'" required><br>
-
-                <label>Lado 3:</label>
-                <input type="number" step="any" name="lado3" value="'.$lado3.'" required><br>
+                <label>Altura:</label>
+                <input type="number" step="any" name="altura" value="'.$altura.'" required><br>
             ';
             break;
 
