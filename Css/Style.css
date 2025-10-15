@@ -112,6 +112,7 @@ header {
     text-align: center;
     border-bottom: 4px solid #ff9800;
 }
+
 /* === FORMULARIO TEMÁTICO SEGÚN FIGURA === */
 body.triangulo {
     background: linear-gradient(135deg, #f7b267, #f79d65);

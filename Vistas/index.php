@@ -12,25 +12,10 @@
 
 <div class="figuras-contenedor">
     <form action="formulario.php" method="post">
-        <button class="figura cuadrado" name="figura" value="Cuadrado">
-            <img src="../img/cuadrado.png" alt="Cuadrado">
-            <span>Cuadrado</span>
-        </button>
-
-        <button class="figura rectangulo" name="figura" value="Rectangulo">
-            <img src="../img/rectangulo.png" alt="Rectángulo">
-            <span>Rectángulo</span>
-        </button>
-
-        <button class="figura triangulo" name="figura" value="Triangulo">
-            <img src="../img/triangulo.png" alt="Triángulo">
-            <span>Triángulo</span>
-        </button>
-
-        <button class="figura circulo" name="figura" value="Circulo">
-            <img src="../img/circulo.png" alt="Círculo">
-            <span>Círculo</span>
-        </button>
+        <button class="figura cuadrado" name="figura" value="Cuadrado">⬛<br>Cuadrado</button>
+        <button class="figura rectangulo" name="figura" value="Rectangulo">▭<br>Rectángulo</button>
+        <button class="figura triangulo" name="figura" value="Triangulo">🔺<br>Triángulo</button>
+        <button class="figura circulo" name="figura" value="Circulo">⚪<br>Círculo</button>
     </form>
 </div>
 
