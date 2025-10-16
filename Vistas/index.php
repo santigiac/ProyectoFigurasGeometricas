@@ -3,21 +3,36 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Selecciona una figura</title>
-    <link rel="stylesheet" href="../css/Style.css">
+    <title>Figuras Geométricas</title>
+    <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body class="inicio">
 
-<h1>Selecciona una figura geométrica</h1>
+<header class="main-header">
+    <h1>Calculadora de Figuras Geométricas</h1>
+    <p>Selecciona una figura GANSTER para comenzar</p>
+</header>
 
-<div class="figuras-contenedor">
-    <form action="formulario.php" method="post">
-        <button class="figura cuadrado" name="figura" value="Cuadrado">⬛<br>Cuadrado</button>
-        <button class="figura rectangulo" name="figura" value="Rectangulo">▭<br>Rectángulo</button>
-        <button class="figura triangulo" name="figura" value="Triangulo">🔺<br>Triángulo</button>
-        <button class="figura circulo" name="figura" value="Circulo">⚪<br>Círculo</button>
+<main class="figuras-contenedor">
+    <form action="formulario.php" method="post" class="figuras-form">
+        <button type="submit" name="figura" value="Cuadrado" class="figura-btn">
+            <img src="../img/caudrado2.jpg" alt="Cuadrado" class="figura-img">
+        </button>
+        <button type="submit" name="figura" value="Rectangulo" class="figura-btn">
+            <img src="../img/rectanfulo2.jpg" alt="Rectángulo" class="figura-img">
+        </button>
+        <button type="submit" name="figura" value="Triangulo" class="figura-btn">
+            <img src="../img/triangulo2.png.jpg" alt="Triángulo" class="figura-img">
+        </button>
+        <button type="submit" name="figura" value="Circulo" class="figura-btn">
+            <img src="../img/circulo2.jpg" alt="Círculo" class="figura-img">
+        </button>
     </form>
-</div>
+</main>
+
+<footer>
+    <p>&copy; <?php echo date('Y'); ?> Figuras Geométricas | Desarrollado en PHP</p>
+</footer>
 
 </body>
 </html>
